@@ -1,7 +1,7 @@
 # Game Name (TBD)
 ## Introduction
 ### Game Summary
-The game is a turn based Role Playing Game (RPG) with a simple story. The player will be in control of a party of heroes tasked with defeating a great evil. The game will focus on fighting mechanics and studying stat sheets and strategy. This is so that the final completed project makes extensive use of SQL tables and the material the course will teach.
+The game is a turn based Role Playing Game (RPG) with a simple story. The player will be in control of a party of heroes tasked with defeating a great evil. The game will focus on fighting mechanics and understading stat sheets and strategy. This is so the final completed project will make extensive use of SQL tables and the material the course will teach.
 
 	
 ### Inspiration
