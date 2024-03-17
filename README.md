@@ -15,7 +15,7 @@ The game will be a turn based strategy game where actions and items can be used 
 
 	
 ### Development software
-The game will be made with Python and SQL as the main tools. The sprites will be drawn using krita most likely. SQL will be used to manage the stat tables and interactions of those tables during fights. Python will be used for the rest of the game functions.
+The game will be made with Python and SQL as the main tools. The sprites will be drawn using krita most likely. SQL will be used to manage the stat tables and interactions of those tables during fights. Python will be used for the rest of the game functions in the backend. html will be used for the website.
 
 ## Concept
 ### Gameplay overview
