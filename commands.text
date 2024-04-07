@@ -8,3 +8,6 @@ flask run
 
 source .venv/bin/activate
 deactivate
+
+
+python3 -m pip install whatever
