@@ -1,28 +1,38 @@
 from flask import Flask
-from flask import render_template
+from flask import redirect, render_template, request
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.sql import text
 
 app = Flask(__name__, template_folder="templates")
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///eddie"
+db = SQLAlchemy(app)
+
+
 
 @app.route("/")
 def index():
-    words = ["apina", "banaani", "cembalo"]
-    return render_template("index.html", message="Tervetuloa!", items=words)
+    result = db.session.execute(text("SELECT content FROM messages"))
+    messages = result.fetchall()
+    return render_template("index.html", count=len(messages), messages=messages) 
 
-@app.route("/page1")
-def page1():
-    return "Tämä on sivu 1"
+@app.route("/new")
+def new():
+    return render_template("new.html")
 
-@app.route("/page2")
-def page2():
-    return "Tämä on sivu 2"
+@app.route("/send", methods=["POST"])
+def send():
+    content = request.form["content"]
+    sql = text("INSERT INTO messages (content) VALUES (:content)")
+    db.session.execute(sql, {"content":content})
+    db.session.commit()
+    return redirect("/")
 
-@app.route("/test")
-def test():
-    content = ""
-    for i in range(100):
-        content += str(i + 1) + " "
-    return content
+if '__main__' == __name__:
+    app.run()
 
-@app.route("/page/<int:id>")
-def page(id):
-    return "Tämä on sivu " + str(id)
+
+
+
+
+
+
