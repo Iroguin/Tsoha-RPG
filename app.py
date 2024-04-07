@@ -5,6 +5,7 @@ from sqlalchemy.sql import text
 from os import getenv
 from dotenv import load_dotenv
 load_dotenv()
+import routes
 
 
 
@@ -16,8 +17,6 @@ db = SQLAlchemy(app)
 
 
 
-
-#Essentials
 
 
 #######################

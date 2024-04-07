@@ -1,3 +1,7 @@
+## Development timeline (aka for peer reviewrs)
+Currently the game is practically non-existent, unfortunately havent had time to actually do much as other stuff came in the way. the plan is to have a functional prototype by next valipalautus. 
+
+
 # Game Name (TBD)
 ## Introduction
 ### Game Summary
@@ -36,9 +40,8 @@ I am as of this moment unsure of the extent that audio production will go so asi
 
 ## Game Experience
 ### UI
-TBD
+The ui will be mostly text based because thats easiest. a command in the command box like attack would open options for attacks and then select one of those etc. 
 ### Controls
 Keyboard controls.
 
-## Development timeline
-TBD
+
