@@ -1,4 +1,4 @@
-## Development timeline (aka for peer reviewrs)
+## Development timeline (aka for reviewrs)
 Currently the game is practically non-existent, unfortunately havent had time to actually do much as other stuff came in the way. the plan is to have a functional prototype by next valipalautus. 
 
 
