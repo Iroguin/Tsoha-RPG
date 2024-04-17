@@ -4,9 +4,11 @@ from flask import render_template, request, redirect, session
 import users
 
 
+
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return "Homepage for Website"
+    #return render_template("index.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -40,6 +42,3 @@ def register():
         else:
             return render_template("error.html", message="Rekisteröinti ei onnistunut")
 
-@app.route('/game')
-def game_page():
-    return render_template('game.html')

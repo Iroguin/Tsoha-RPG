@@ -10,7 +10,8 @@ app.secret_key = getenv("SECRET_KEY")
 app.config["SQLALCHEMY_DATABASE_URI"] = getenv("DATABASE_URL")
 db = SQLAlchemy(app)
 
+
 if '__main__' == __name__:
-    app.run()
+    app.run(debug=True)
 
 import routes
