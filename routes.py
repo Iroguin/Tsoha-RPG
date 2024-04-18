@@ -4,7 +4,6 @@ from flask import render_template, request, redirect, session
 import users
 
 
-
 @app.route("/")
 def index():
     return "Homepage for Website"
