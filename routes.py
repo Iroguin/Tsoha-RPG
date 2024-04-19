@@ -4,10 +4,12 @@ from flask import render_template, request, redirect, session
 import users
 
 
+print('test')
 @app.route("/")
 def index():
     return "Homepage for Website"
     #return render_template("index.html")
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
