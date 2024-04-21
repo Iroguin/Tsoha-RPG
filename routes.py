@@ -2,12 +2,14 @@ from app import app
 from flask import Flask
 from flask import render_template, request, redirect, session
 import users
+import characters as ch
 
 
-print('test')
+print('routes run')
+
 @app.route("/")
 def index():
-    return "Homepage for Website"
+    return render_template("index.html")
     #return render_template("index.html")
 
 
@@ -42,4 +44,11 @@ def register():
             return redirect("/")
         else:
             return render_template("error.html", message="Rekisteröinti ei onnistunut")
+
+@app.route("/fight")
+def fight():
+    enemies = ch.enemies()
+    characters = ch.characters()
+    return render_template('index.html', enemies=enemies, characters=characters)
+
 
