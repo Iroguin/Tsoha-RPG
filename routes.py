@@ -2,7 +2,7 @@ from app import app
 from flask import Flask
 from flask import render_template, request, redirect, session
 import users
-import characters as ch
+import entities as ent
 
 
 print('routes run')
@@ -47,8 +47,13 @@ def register():
 
 @app.route("/fight")
 def fight():
-    enemies = ch.enemies()
-    characters = ch.characters()
-    return render_template('index.html', enemies=enemies, characters=characters)
+    ent.load_characters()
+    ent.load_enemies()
+    characters = ent.characters()
+    enemies = ent.enemies()
+    print(fight)
+    return render_template('fight.html', enemies=enemies, characters=characters)
 
-
+@app.route("/game")
+def game():
+    return render_template('game.html')

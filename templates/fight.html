@@ -9,7 +9,7 @@
     <table>
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Name</th>
                 <th>Health</th>
                 <th>Attack</th>
             </tr>
@@ -17,7 +17,7 @@
         <tbody>
             {% for character in characters %}
             <tr>
-                <td>{{ character.id }}</td>
+                <td>{{ character.name }}</td>
                 <td>{{ character.health }}</td>
                 <td>{{ character.attack }}</td>
             </tr>
@@ -29,7 +29,7 @@
     <table>
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Name</th>
                 <th>Health</th>
                 <th>Attack</th>
             </tr>
@@ -37,7 +37,7 @@
         <tbody>
             {% for enemy in enemies %}
             <tr>
-                <td>{{ enemy.id }}</td>
+                <td>{{ enemy.name }}</td>
                 <td>{{ enemy.health }}</td>
                 <td>{{ enemy.attack }}</td>
             </tr>
