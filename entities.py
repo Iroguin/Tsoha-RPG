@@ -1,23 +1,25 @@
 from db import db
 from sqlalchemy.sql import text
 
-def load_enemies():
+def load_enemy(name, health, attack):
     sql = """
             INSERT INTO 
             enemylist(name, health, attack) 
-            VALUES ('goblin', '10', '3')
+            VALUES ('name', 'health', 'attack')
             """
-    db.session.execute(text(sql))
+    db.session.execute(text(sql), {"name":name, "health":health, "attack":attack})
     db.session.commit()
 
-def load_characters():
+def load_character(name, health, attack):
     sql = """
             INSERT INTO 
             characterlist(name, health, attack) 
-            VALUES ('hero', '20', '5')
+            VALUES ('name', 'health', 'attack')
             """
-    db.session.execute(text(sql))
+    db.session.execute(text(sql), {"name":name, "health":health, "attack":attack})
     db.session.commit()
+
+
 
 def enemies():
     sql = """SELECT * FROM enemylist"""

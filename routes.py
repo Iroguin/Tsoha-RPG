@@ -47,8 +47,8 @@ def register():
 
 @app.route("/fight")
 def fight():
-    ent.load_characters()
-    ent.load_enemies()
+    ent.load_character("hero", 20, 5)
+    ent.load_enemy()
     characters = ent.characters()
     enemies = ent.enemies()
     print(fight)

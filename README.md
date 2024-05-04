@@ -1,7 +1,3 @@
-## Development timeline (aka for reviewrs)
-Currently the game is practically non-existent, unfortunately havent had time to actually do much as other stuff came in the way. the plan is to have a functional prototype by next valipalautus. 
-
-
 # Game Name (TBD)
 ## Introduction
 ### Game Summary
@@ -34,9 +30,6 @@ TBD
 ## Art
 ### Design
 The artstyle of the game will be simple pixel art. For one to emulate the games it is inspired by and also because of the limited time and resources for making it. 
-	
-### Audio
-I am as of this moment unsure of the extent that audio production will go so aside from some simple music and fighting sound effects the rest is to be decided.
 
 ## Game Experience
 ### UI
