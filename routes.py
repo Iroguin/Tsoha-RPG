@@ -18,12 +18,17 @@ def login():
     if request.method == "GET":
         return render_template("login.html")
     if request.method == "POST":
-        username = request.form["username"]
-        password = request.form["password"]
-        if users.login(username, password):
-            return redirect("/")
-        else:
-            return render_template("error.html", message="Väärä tunnus tai salasana")
+        try:
+            username = request.form["username"]  # Access form data using "username" key
+            password = request.form["password"]
+            if users.login(username, password):
+                return redirect("/")
+            else:
+                return render_template("error.html", message="Väärä tunnus tai salasana")
+        except KeyError:
+            return render_template("error.html", message="Käyttäjätunnus tai salasana puuttuu")
+
+
 
 @app.route("/logout")
 def logout():
@@ -47,8 +52,8 @@ def register():
 
 @app.route("/fight")
 def fight():
-    ent.load_character("hero", 20, 5)
-    ent.load_enemy()
+    ent.add_character("hero", 20, 5)
+    ent.add_enemy("goblin", 10, 3)
     characters = ent.characters()
     enemies = ent.enemies()
     print(fight)

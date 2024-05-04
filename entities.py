@@ -1,20 +1,20 @@
 from db import db
 from sqlalchemy.sql import text
 
-def load_enemy(name, health, attack):
+def add_enemy(name, health, attack):
     sql = """
             INSERT INTO 
             enemylist(name, health, attack) 
-            VALUES ('name', 'health', 'attack')
+            VALUES (:name, :health, :attack)
             """
     db.session.execute(text(sql), {"name":name, "health":health, "attack":attack})
     db.session.commit()
 
-def load_character(name, health, attack):
+def add_character(name, health, attack):
     sql = """
             INSERT INTO 
             characterlist(name, health, attack) 
-            VALUES ('name', 'health', 'attack')
+            VALUES (:name, :health, :attack)
             """
     db.session.execute(text(sql), {"name":name, "health":health, "attack":attack})
     db.session.commit()

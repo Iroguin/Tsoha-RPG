@@ -1,7 +1,19 @@
 {% if session.user_id %}
 <p>Olet kirjautunut nimellä {{ session.user_id }}</p>
-<a href="/logout">Kirjaudu ulos</a>
+<head>
+    <meta charset="UTF-8">
+    <title>Game Menu</title>
+</head>
+<body>
+    <p>Toiminnot:</p>
 
+    <ul>
+        <li><a href="/game">Aloita uusi peli</a></li>
+        <li><a href="/game">Jatka peliä</a></li>
+        <li><a href="/logout">Log Out</a></li>
+    </ul>
+
+</body>
 {% else %}
 <form action="/login" method="POST">
 <p>Tunnus:<br>

@@ -1,11 +1,11 @@
 CREATE TABLE users (
-    id SERIAL PRIMARY KEY, 
-    username TEXT, 
-    password TEXT
+    id SERIAL PRIMARY KEY NOT NULL, 
+    username TEXT UNIQUE NOT NULL, 
+    password TEXT NOT NULL
 );
 CREATE TABLE enemylist (
     id SERIAL PRIMARY KEY, 
-    name TEXT, 
+    name TEXT UNIQUE, 
     health INTEGER,
     attack INTEGER
 );
