@@ -1,39 +1,69 @@
 # Very Simple Role Playing Game
+
 ## Introduction
 
 ### Game Summary
-The game is a turn based Role Playing Game (RPG) with a simple story. The player is in control of a party of heroes tasked with defeating a great evil. The game focuses on strategy and stat based fighting mechanics. This is so the final completed project makes extensive use of SQL tables and the material the course teaches.
 
-### Player experience
-The game is a turn based strategy game where different actions (and items in the future) can be used by characters on every turn to fight and exploit the weaknesses of different enemy types. Stat sheets and calculating the benefits of different actions should be the decider of winning tough battles.
+The game is a turn based Role Playing Game (RPG) with a simple story. The player is in control of a party of heroes tasked with defeating a great evil. The game focuses on strategy and stat-based fighting mechanics. This is so the final completed project makes sufficent use of SQL tables and the material the course teaches.
+
+### Player Experience
+
+The game is a strategy game where different actions (and in the future items) can be used by characters on every turn to fight and exploit the weaknesses of different enemy types. Stat sheets and calculating the benefits of different actions would be the decider of winning tough battles.
 
 ## State of Development
-Stuff that works
--characters
--rudimentary fighting mechanics
--registering and logging in
 
-What im planning on implementing:
--turn system
--variable character actions
--more robust fighting mechanics
--better navigability
+Stuff that works:
 
+ - player characters
+ - rudimentary fighting mechanics
+ - registering and logging in
+
+Stuff that doesn't work:
+
+ - fighting doesnt have a win condition
+ - new game and continue do the same thing currently
+
+Next steps:
+
+ - turn system
+ - additional character actions
+ - more robust fighting mechanics
+ - improved site navigability
 
 ## Trying it Out
-New text. Add in a followup commit.
+
+ - create virtual environment (venv)
+ - install dependencies:
+    ```
+    pip install -r requirements.txt
+    ```
+ - install postgresql as instructed in the course material
+ - make `.env` file with postgresql address
+ - run the server:
+    ```
+    flask run [--debug]
+    ```
+ - enter the url in a browser: http://127.0.0.1:5000
+ - follow the instructions to register an account and log in
+ - start a new game by clicking on the "new game" link
+ - try fighting the enemy goblins
 
 ## Appendix
-Organize the existing text under the following headings.
+
+The following are some earlier thoughts on the design of the game.
 
 ### Gameplay overview
+
 The understanding of the underlying mechanics of the game and strategizing in fights is the main draw of the game. The game won't have much exploration and its design is to be mostly linear to keep the design simple. The player progresses through the game by fighting stronger and stronger enemies while gaining power before fighting the final boss.
 
 ### Primary mechanics
+
 There is a main party of four characters with each having their own strengths, weaknesses and abilities. These will be represented in their stat sheets which can change depending on the equipment and items the characters are equipped with.
 
 ### Art
-Though not implemented yet the artstyle of the game will be simple pixel art. For one to emulate the games it is inspired by and also because of the limited time and resources for making it.
+
+Though not implemented yet, the art style of the game will be simple pixel art, to emulate the games it is inspired by, and also because of the limited time and resources available.
 
 ### UI
-The ui is mostly text based. a command in the command box like attack opens options for attacks and then selecting one of those execcutes it etc.
+
+The UI is mostly text based. A command in the command box like "attack" opens options for attacks, and then selecting one of those execcutes it.
