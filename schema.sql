@@ -1,6 +1,6 @@
 CREATE TABLE users (
     id SERIAL PRIMARY KEY NOT NULL, 
-    username TEXT UNIQUE NOT NULL, 
+    username TEXT UNIQUE NOT NULL, CHECK (LENGTH(username) >= 3 AND LENGTH(username) <= 25),
     password TEXT NOT NULL
 );
 CREATE TABLE enemylist (
@@ -11,13 +11,15 @@ CREATE TABLE enemylist (
 );
 CREATE TABLE characterlist (
     id SERIAL PRIMARY KEY, 
-    name TEXT, 
+    name TEXT UNIQUE, 
     health INTEGER,
-    attack INTEGER
+    attack INTEGER,
+    exp INTEGER DEFAULT 0
 );
 CREATE TABLE fights (
     id SERIAL PRIMARY KEY,
-    name TEXT,
+    name TEXT UNIQUE,
+    difficulty INT
 )
 CREATE TABLE fightsenemies (
     id SERIAL PRIMARY KEY,

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+</head>
+<body>
+{% if session.user_id %}
+
+    <h1>Welcome back, {{ session.user_name }}!</h1>
+    <ul>
+        <li><a href="/fight">Fight!</a></li>
+        <li><a href="/logout">Log Out</a></li>
+    </ul>
+
+{% else %}
+  <script>
+      window.location.href = "{{ url_for('index') }}";  </script>
+{% endif %}
+</body>
+</html>

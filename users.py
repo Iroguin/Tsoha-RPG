@@ -2,6 +2,7 @@ from db import db
 from flask import session
 from werkzeug.security import check_password_hash, generate_password_hash
 from sqlalchemy.sql import text
+import entities as ent
 
 def login(username, password):
     sql = text("SELECT id, password FROM users WHERE username=:username")
@@ -25,9 +26,12 @@ def register(username, password):
         sql = text("INSERT INTO users (username,password) VALUES (:username,:password)")
         db.session.execute(sql, {"username":username, "password":hash_value})
         db.session.commit()
+        ent.new_characters()
+        return True
     except:
         return False
-    return login(username, password)
+
+
 
 def user_id():
     return session.get("user_id",0)

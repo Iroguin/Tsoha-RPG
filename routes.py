@@ -25,8 +25,6 @@ def login():
         except KeyError:
             return render_template("error.html", message="Käyttäjätunnus tai salasana puuttuu")
 
-
-
 @app.route("/logout")
 def logout():
     users.logout()
@@ -47,15 +45,20 @@ def register():
         else:
             return render_template("error.html", message="Rekisteröinti ei onnistunut")
 
-@app.route("/fight")
-def fight():
-    ent.add_character("hero", 20, 5)
-    ent.add_enemy("goblin", 10, 3)
-    characters = ent.characters()
-    enemies = ent.enemies()
-    print(fight)
-    return render_template('fight.html', enemies=enemies, characters=characters)
 
-@app.route("/game")
+@app.route("/fight", methods=["GET", "POST"])
+def fight():
+    if request.method == "GET":
+        print("fight")
+        characters = ent.load_characters()
+        enemies = ent.load_enemies()
+        return render_template('fight.html', enemies=enemies, characters=characters)
+    if request.method == "POST":
+        #calculate damage and increment turn
+
+@app.route("/game", methods=["GET", "POST"])
 def game():
-    return render_template('game.html')
+    if request.method == "GET":
+        return render_template('game.html')
+    if request.method == "POST":
+
