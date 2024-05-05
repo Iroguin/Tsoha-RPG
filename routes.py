@@ -55,10 +55,12 @@ def fight():
         return render_template('fight.html', enemies=enemies, characters=characters)
     if request.method == "POST":
         #calculate damage and increment turn
+        pass
 
 @app.route("/game", methods=["GET", "POST"])
 def game():
     if request.method == "GET":
         return render_template('game.html')
     if request.method == "POST":
+        pass
 
