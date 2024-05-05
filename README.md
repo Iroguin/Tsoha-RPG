@@ -8,9 +8,17 @@ The game is a turn based Role Playing Game (RPG) with a simple story. The player
 The game is a turn based strategy game where different actions (and items in the future) can be used by characters on every turn to fight and exploit the weaknesses of different enemy types. Stat sheets and calculating the benefits of different actions should be the decider of winning tough battles.
 
 ## State of Development
-New text. Add in a followup commit.
+Stuff that works
+-characters
+-rudimentary fighting mechanics
+-registering and logging in
 
-I am planning on continuing working on this project after this course and iterating on it further.
+What im planning on implementing:
+-turn system
+-variable character actions
+-more robust fighting mechanics
+-better navigability
+
 
 ## Trying it Out
 New text. Add in a followup commit.
