@@ -4,7 +4,7 @@
 
 ### Game Summary
 
-The game is a turn based Role Playing Game (RPG) with a simple story. The player is in control of a party of heroes tasked with defeating a great evil. The game focuses on strategy and stat-based fighting mechanics. This is so the final completed project makes sufficent use of SQL tables and the material the course teaches.
+The game is a turn based Role Playing Game (RPG) with a simple story. The player is in control of a party of heroes tasked with defeating a great evil. The game focuses on strategy and stats-based fighting mechanics. This is so the completed project makes sufficent use of SQL tables and the material the course teaches.
 
 ### Player Experience
 
@@ -20,8 +20,8 @@ Stuff that works:
 
 Stuff that doesn't work:
 
- - fighting doesnt have a win condition
- - new game and continue do the same thing currently
+ - fighting doesn't have a win condition
+ - "new game" and "continue" do the same thing currently
 
 Next steps:
 
@@ -38,12 +38,12 @@ Next steps:
     pip install -r requirements.txt
     ```
  - install postgresql as instructed in the course material
- - make `.env` file with postgresql address
+ - create `.env` file with postgresql address
  - run the server:
     ```
     flask run [--debug]
     ```
- - enter the url in a browser: http://127.0.0.1:5000
+ - enter the following URL in a browser: http://127.0.0.1:5000
  - follow the instructions to register an account and log in
  - start a new game by clicking on the "new game" link
  - try fighting the enemy goblins
@@ -62,8 +62,8 @@ There is a main party of four characters with each having their own strengths, w
 
 ### Art
 
-Though not implemented yet, the art style of the game will be simple pixel art, to emulate the games it is inspired by, and also because of the limited time and resources available.
+Though not implemented yet, the art style of the game will be simple pixel art, to emulate the games it is inspired by, and also because of the limited time available.
 
 ### UI
 
-The UI is mostly text based. A command in the command box like "attack" opens options for attacks, and then selecting one of those execcutes it.
+The UI is mostly text based. A command in the command box like "attack" opens options for attacks, and then selecting one of those executes it.
