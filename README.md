@@ -38,7 +38,11 @@ Next steps:
     pip install -r requirements.txt
     ```
  - install postgresql as instructed in the course material
- - create `.env` file with postgresql address
+ - create .env file with postgresql address:
+   ```
+   DATABASE_URL=postgresql:///<my db name>
+   SECRET_KEY=<my secret key>
+   ```
  - run the server:
     ```
     flask run [--debug]

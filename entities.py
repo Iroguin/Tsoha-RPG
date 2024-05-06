@@ -6,6 +6,7 @@ def add_enemy(name, health, attack):
             INSERT INTO 
             enemylist(name, health, attack) 
             VALUES (:name, :health, :attack)
+            ON CONFLICT DO NOTHING
             """
     db.session.execute(text(sql), {"name":name, "health":health, "attack":attack})
     db.session.commit()
@@ -15,13 +16,14 @@ def add_character(name, health, attack):
             INSERT INTO 
             characterlist(name, health, attack) 
             VALUES (:name, :health, :attack)
+            ON CONFLICT DO NOTHING
             """
     db.session.execute(text(sql), {"name":name, "health":health, "attack":attack})
     db.session.commit()
 
 def new_characters():
     sql = """
-            TRUNCATE TABLE characters
+            TRUNCATE TABLE characterlist
             """
     db.session.execute(text(sql))
     db.session.commit()
@@ -29,7 +31,6 @@ def new_characters():
     add_character("healer", 15, 2)
     add_character("mage", 15, 6)
     add_character("defender", 30, 3)
-
 
 def load_enemies():
     sql = """SELECT name, health, attack FROM enemylist"""
